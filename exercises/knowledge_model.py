@@ -6,6 +6,11 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Knowledge(Base):
+	__tablename__ = 'space'
+	student_id = Column(Integer, primary_key = True)
+	topic = Column(String)
+	article_title = Column(String)
+	rating = Column(Integer)
 	# Create a table with 4 columns
 	# The first column will be the primary key
 	# The second column should be a string representing
